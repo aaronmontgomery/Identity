@@ -1,1 +1,3 @@
 # Identity
+
+Identity demos the Microsoft Identity Foundation classes in .NET Core with Entity Framework Core. Identity provides a user manager to create users, send verification emails, forgot password, two step authentication, and social logins. The role manager allows role creation and the ability to add a user to a role. The sign in manager allows existing users to sign in or sign out of a website and works with an authorization policy to determine whether a user/role can run specific controller actions.
