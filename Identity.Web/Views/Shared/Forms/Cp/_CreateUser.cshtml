@@ -1,0 +1,13 @@
+﻿@using (Html.BeginForm("create", "user", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="">Username</label>
+        <input type="text" class="form-control" name="username" />
+        <label for="">Password</label>
+        <input type="password" class="form-control" name="password" />
+        <label for="">Confirm Password</label>
+        <input type="password" class="form-control" name="confirm" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create User</button>
+}

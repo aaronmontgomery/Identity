@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using Identity.Entities
+
+@inject SignInManager<ApplicationUser> SignInManager
+
+<header>
+    @{
+        await Html.RenderPartialAsync("~/Views/Shared/_Nav.cshtml");
+        if (!SignInManager.IsSignedIn(Context.User))
+        {
+            await Html.RenderPartialAsync("~/Views/Shared/Forms/_SignIn.cshtml");
+        }
+
+        else
+        {
+            await Html.RenderPartialAsync("~/Views/Shared/Forms/_SignOut.cshtml");
+        }
+    }
+</header>

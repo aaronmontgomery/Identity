@@ -1,0 +1,9 @@
+﻿@using (Html.BeginForm("create", "role", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="">Rolename</label>
+        <input type="text" class="form-control" name="rolename" />
+    </div>
+    <button type="submit" class="btn btn-primary">Create Role</button>
+}

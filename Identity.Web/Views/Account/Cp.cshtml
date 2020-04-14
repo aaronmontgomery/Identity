@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "/Account/ControlPanel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    <h1>/Account/ControlPanel</h1>
+
+    <h2>Create User</h2>
+    await Html.RenderPartialAsync("~/Views/Shared/Forms/Cp/_CreateUser.cshtml");
+
+    <h2>Delete User</h2>
+    await Html.RenderPartialAsync("~/Views/Shared/Forms/Cp/_DeleteUser.cshtml");
+
+    <h2>Create Role</h2>
+    await Html.RenderPartialAsync("~/Views/Shared/Forms/Cp/_CreateRole.cshtml");
+
+    <h2>Delete Role</h2>
+    await Html.RenderPartialAsync("~/Views/Shared/Forms/Cp/_DeleteRole.cshtml");
+
+    <h2>Add Users to Roles</h2>
+    await Html.RenderPartialAsync("~/Views/Shared/Forms/Cp/_AddUsersToRoles.cshtml");
+
+    <h2>Remove Users from Roles</h2>
+    await Html.RenderPartialAsync("~/Views/Shared/Forms/Cp/_RemoveUsersFromRoles.cshtml");
+}

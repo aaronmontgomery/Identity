@@ -1,0 +1,11 @@
+﻿@using (Html.BeginForm("adduserstoroles", "user", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="">Usernames</label>
+        <input type="text" class="form-control" name="usernames" />
+        <label for="">Rolenames</label>
+        <input type="text" class="form-control" name="rolenames" />
+    </div>
+    <button type="submit" class="btn btn-primary">Add Users To Roles</button>
+}

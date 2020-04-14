@@ -1,0 +1,9 @@
+﻿@using (Html.BeginForm("delete", "user", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-group">
+        <label for="">Username</label>
+        <input type="text" class="form-control" name="username" />
+    </div>
+    <button type="submit" class="btn btn-primary">Delete User</button>
+}
