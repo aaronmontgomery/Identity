@@ -48,7 +48,6 @@ namespace Identity.Web.Controllers
         public async Task<ActionResult> SignOut()
         {
             await _signInManager.SignOutAsync();
-
             return RedirectToAction("index", "home");
         }
 

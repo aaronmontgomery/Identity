@@ -39,7 +39,6 @@ namespace Identity.Web.Controllers
         {
             Entities.ApplicationUser user = await _userManager.FindByNameAsync(username);
             await _userManager.DeleteAsync(user);
-
             return RedirectToAction("cp", "home");
         }
 

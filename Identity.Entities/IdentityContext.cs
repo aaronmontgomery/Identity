@@ -1,10 +1,19 @@
 ﻿using System;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Identity.Entities
 {
-    public partial class IdentityContext : DbContext
+    public partial class IdentityContext : IdentityDbContext<
+        ApplicationUser,
+        ApplicationRole,
+        int,
+        ApplicationUserClaim,
+        ApplicationUserRole,
+        ApplicationUserLogin,
+        ApplicationRoleClaim,
+        ApplicationUserToken>
     {
         public IdentityContext()
         {
